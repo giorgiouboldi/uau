@@ -1,0 +1,79 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  overflow:hidden;
+  height:100%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+}
+
+h2{
+    font-family: 'Archivo Black', sans-serif;
+}
+
+h2 small{
+    font-family: "Times New Roman", Times, serif;
+}
+
+p {
+  text-indent: 20px;
+  font-size: 1.2rem;
+}
+
+#left {
+  height:100%;
+}
+
+#right {
+  height:100%;
+}
+
+.issue{
+  min-height: 200px;
+  border-bottom: 2px solid #000;
+  margin-left: 0;
+  padding: 15px 0px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #left {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    border-right: 2px solid #000;
+  }
+  
+  #right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: scroll;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
