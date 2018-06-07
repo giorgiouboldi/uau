@@ -34,6 +34,13 @@ p {
   font-size: 1.3rem;
 }
 
+a {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
 .uauTitle {
   height: 12rem;
   overflow: hidden;
@@ -82,10 +89,11 @@ p {
 
 
 .introHome p {
-  font-size: 36px;
+  font-size: 2rem;
   color: #000000;
   letter-spacing: 0;
-  line-height: 45px;
+  line-height: 2.5rem;
+  padding-top: 3rem;
 }
 
 .headerAccordion {
