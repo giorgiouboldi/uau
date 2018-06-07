@@ -39,6 +39,11 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.8rem;
+  color: #000;
+}
+
+a:hover {
+  color: #000;
 }
 
 .uauTitle {
@@ -94,6 +99,10 @@ a {
   letter-spacing: 0;
   line-height: 2.5rem;
   padding-top: 3rem;
+}
+
+.introHome h6 {
+  padding-bottom: 5rem;
 }
 
 .headerAccordion {
