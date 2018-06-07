@@ -34,14 +34,6 @@ p {
   font-size: 1.3rem;
 }
 
-a {
-  font-family: 'Archivo Black', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-  color: #000;
-}
-
 a:hover {
   color: #000;
 }
@@ -99,6 +91,14 @@ a:hover {
   letter-spacing: 0;
   line-height: 2.5rem;
   padding-top: 3rem;
+}
+
+.introHome a, .navArchivio a {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  color: #000;
 }
 
 .introHome h6 {
