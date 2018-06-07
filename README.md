@@ -1,1 +1,0 @@
-# Scrollama boilerplate
