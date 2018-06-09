@@ -28,6 +28,7 @@ h6{
 h2 {
   font-family: 'Archivo Black', sans-serif;
   text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 p {
@@ -39,15 +40,16 @@ a:hover {
 }
 
 .uauTitle {
-  height: 12rem;
+  height: 7rem;
   overflow: hidden;
   position: relative;
   width: 3200px;
 }
+
 .uauTitle h1 {
   font-family: 'Archivo Black', sans-serif;
   text-transform: uppercase;
-  font-size: 144px;
+  font-size: 72px;
   letter-spacing: 0;
   position: absolute;
   width: 100%;
@@ -86,14 +88,14 @@ a:hover {
 
 
 .introHome p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #000000;
   letter-spacing: 0;
-  line-height: 2.5rem;
+  line-height: 2rem;
   padding-top: 3rem;
 }
 
-.introHome a, .navArchivio a {
+.introHome a {
   font-family: 'Archivo Black', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -101,8 +103,25 @@ a:hover {
   color: #000;
 }
 
+.navArchivio a {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.navArchivio {
+  text-align: center;
+}
+
 .introHome h6 {
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
+}
+
+.introHome {
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
 .headerAccordion {
@@ -158,11 +177,12 @@ a:hover {
 .card-block {
   background-color: #3a3b3b;
   color: #fff;
-  padding: 2rem 2rem 0rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
 }
 
 .archiveLinks {
   padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 .archiveLinks a{
@@ -181,26 +201,51 @@ a:hover {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .uauTitle h1 {
+  font-size: 144px;
+}
+
+.uauTitle {
+  height: 12rem;
+}
+
+.introHome p {
+  font-size: 2rem;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 2.5rem;
+  padding-top: 3rem;
+}
+
+.introHome h6 {
+  padding-bottom: 5rem;
+}
+
+.introHome {
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.card-block {
+  padding: 2rem 2rem 0rem 2rem;
+}
+
+.archiveLinks {
+  padding-top: 3rem;
+  padding-bottom: 0rem;
+}
+
 
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #left {
-    position: absolute;
-    top: 0px;
-    bottom: 0;
-    left: 0;
-    border-right: 2px solid #000;
-  }
 
-  #right {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    overflow-y: scroll;
-  }
+
 }
 
 /* Large devices (desktops, 992px and up) */

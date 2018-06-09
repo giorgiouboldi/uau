@@ -28,7 +28,7 @@
 </div>
 
 <!-- Header Accordion -->
-<div class="container-fluid no-gutters">
+<div class="container-fluid no-gutters d-none d-sm-block">
 <div class="row headerAccordion">
 <div class="col-md-3">
 Numero
@@ -76,8 +76,11 @@ Tema
 <a href="{{{open}}}" target="blank">Sfoglialo su archive.org</a>
 </div>
 </div>
-<div class="col-md-9">
+<div class="col-md-9 d-none d-sm-block">
 {{{iframe}}}
+</div>
+<div class="col-md-9 d-block d-sm-none">
+{{{iframe_small}}}
 </div>
 </div>
 </div>
