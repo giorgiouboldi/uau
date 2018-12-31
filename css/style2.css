@@ -1,56 +1,121 @@
+@font-face {
+    font-family: Syne-Regular;
+    src: url("fonts/Syne-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Syne-Bold;
+    src: url("fonts/Syne-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Syne-Extra;
+    src: url("fonts/Syne-Extra.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Syne-Italic;
+    src: url("fonts/Syne-Italic.otf") format("opentype");
+}
+
+
+
 html,
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   margin: 0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Syne-Regular, Arial, sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+h1 {
+    font-family: Syne-Extra, Arial, sans-serif;
+    padding:5px 0;
+    font-size: 56px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+    line-height: 100px;
+}
+
+h5 {
+    font-family: Syne-Extra, Arial, sans-serif;
+    padding:5px 0;
+    font-size: 56px!important;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+    line-height: 100px;
+}
+
+h2 {
+    font-family: Syne-Bold, Arial, sans-serif;
+    font-size: 32px;
+}
+
+h3 {
+    font-family: Syne-Extra, Arial, sans-serif;
+    font-size: 16px;
+}
+h4 {
+    font-family: Syne-Bold, Arial, sans-serif;
+    font-size: 32px;
+}
+
+
 h6{
-}
-
-h5{
-  font-family: 'Archivo Black', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 h6{
   font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
 }
 
-h2 {
-  font-family: 'Archivo Black', sans-serif;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
 
 p {
   font-size: 1.1rem;
 }
 
-a:hover {
-  color: #000;
+.lead{
+  font-size: 24px;
 }
 
+a:hover {
+  color: ;
+}
 
-.bigTitle{
-    padding:10px 0;
-    font-size: 80px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    margin: 40px 0;
-    line-height: 100px;
+b {
+  font-family: Syne-Extra, Arial, sans-serif;
+}
+
+.regular {
+      font-family: Syne-Regular;
+}
+
+#content {
+}
+
+.img-responsive {
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 0px;
+}
+
+.introFine {
+margin: 10px 0 50px;
 }
 
 .entry {
-  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding: 20px 0;
 }
 
 .uauTitle {
@@ -58,46 +123,6 @@ a:hover {
   overflow: hidden;
   position: relative;
   width: 7200px;
-}
-
-.uauTitle h1 {
-  font-family: 'Archivo Black', sans-serif;
-  text-transform: uppercase;
-  font-size: 72px;
-  letter-spacing: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  /* Starting position */
-  -moz-transform:translateX(100%);
-  -webkit-transform:translateX(100%);  
-  transform:translateX(100%);
-  /* Apply animation to this element */  
-  -moz-animation: uauTitle 25s linear infinite;
-  -webkit-animation: uauTitle 25s linear infinite;
-  animation: uauTitle 25s linear infinite;
-}
-/* Move it (define the animation) */
-@-moz-keyframes uauTitle {
-  0%   { -moz-transform: translateX(100%); }
-  100% { -moz-transform: translateX(-100%); }
-}
-@-webkit-keyframes uauTitle {
-  0%   { -webkit-transform: translateX(100%); }
-  100% { -webkit-transform: translateX(-100%); }
-}
-@keyframes uauTitle {
-  0%   { 
-    -moz-transform: translateX(100%); /* Firefox bug fix */
-    -webkit-transform: translateX(100%); /* Firefox bug fix */
-    transform: translateX(100%);     
-  }
-  100% { 
-    -moz-transform: translateX(-100%); /* Firefox bug fix */
-    -webkit-transform: translateX(-100%); /* Firefox bug fix */
-    transform: translateX(-100%); 
-  }
 }
 
 .introHome p {
@@ -140,15 +165,11 @@ a:hover {
 .headerAccordion {
   background-color: #000;
   color: #fff;
-  padding: 0.3rem 2rem;
   text-transform: uppercase;
+  z-index: 9999;
+  padding: 4px 0;
 }
 
-.navArchivio {
-  padding: 1rem 2rem;
-  font-family: 'Archivo Black', sans-serif;
-  text-transform: uppercase;
-}
 
 .card-block hr{
   display: block;
@@ -158,10 +179,6 @@ a:hover {
   margin: 1em 0;
   padding: 0; 
   width: 50px;
-}
-
-img{
-      mix-blend-mode: multiply;
 }
 
 
@@ -235,34 +252,6 @@ img{
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  .uauTitle h1 {
-  font-size: 144px;
-}
-
-.uauTitle {
-  height: 12rem;
-}
-
-.introHome p {
-  font-size: 2rem;
-  color: #000000;
-  letter-spacing: 0;
-  line-height: 2.5rem;
-  padding-top: 3rem;
-}
-
-.introHome h6 {
-  padding-bottom: 5rem;
-}
-
-.introHome {
-  margin-bottom: 4rem;
-  text-align: left;
-}
-
-h2 {
-  font-size: 2rem;
-}
 
 .card-block {
   padding: 2rem 2rem 0rem 2rem;

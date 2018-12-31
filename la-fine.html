@@ -1,0 +1,179 @@
+	<!DOCTYPE html>
+	<html>
+
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Un'ambigua utopia</title>
+	<meta name="description" content="UAU">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style2.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet"> 
+	</head>
+
+	<body class="fine">
+
+	<!-- Header Accordion -->
+	<div class="container-fluid">
+	<div class="row navArchivio">
+	<div class="col-md-3">
+	<a href="index.html">&#8629; Torna a UAU</a>
+	</div>
+	<div class="col-md-3">
+	</div>
+	</div>
+	</div>
+
+	<div class="container-fluid">
+	<div class="row introHome">
+	<div class="col-lg-12">
+	<!--Better on Chrome-->
+
+	<svg height="3"
+	xmlns="http://www.w3.org/2000/svg">
+	<filter id="displacementFilter">
+	<feTurbulence type="turbulence"
+	numOctaves="5" result="turbulence">
+	<animate attributeType="XML" attributeName="baseFrequency" from=".00001" to=".007"
+	dur="40s" repeatCount="indefinite"/>
+	</feTurbulence>
+	<feDisplacementMap in2="turbulence" in="SourceGraphic"
+	scale="35" xChannelSelector="R" yChannelSelector="G"/>
+	</filter>
+	</svg>
+
+	<div style="filter: url(#displacementFilter)" class="text-center"><h1>La Fine Dell'Uomo</h1>
+	<img class="img-responsive d-none d-lg-block img-fluid" src="images/cover-fine.png">
+	<h5>Gennaio &#10230; Giugno 2019</h5>
+	</div>
+
+	</div>
+	</div>
+	
+	<div class="row introFine">
+	<div class="col-lg-5 offset-lg-1">
+	<p class="lead">Un ciclo di sei appuntamenti all’insegna della <b>fantascienza radicale</b>.<br>Ogni seconda domenica del mese.</p>
+	</div>
+	<div class="col-lg-2 offset-lg-1">
+	<p><b>18:30</b> — DIALOGO <br>
+	   <b>20:00</b> — CENA <br>
+	   <b>21:00</b> — CINEMA</p>
+	</div>
+	<div class="col-lg-2">
+	<p>&#10230; <b>Piano Terra</b> <br>
+	   via Federico Confalonieri 3<br>
+	Milano</p>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<!-- Header Accordion-->
+	<div class="container-fluid d-none d-lg-block">
+	<div class="row headerAccordion" id="navbar">
+	<div class="col-lg-3 offset-lg-1">
+
+	</div>
+	<div class="col-lg-3">
+	Dialogo
+	</div>
+	<div class="col-lg-2">
+	Cena
+	</div>
+	<div class="col-lg-2">
+	Cinema
+	</div>
+	</div>
+	</div>
+	
+
+	<!-- Accordion Container -->
+	<div class="container-fluid">
+
+	<div id="content"></div>
+
+	<!-- Script to get cards -->
+	<script id="cat-template" type="text/x-handlebars-template">
+	
+	<div class="entry">
+	<div class="row">
+
+	<div class="col-lg-3 offset-lg-1">
+	<h3>{{date}}</h3>
+	<a href="{{link_fb}}"><h2>{{titolo}}</h2></a>
+	</div>
+
+	<div class="col-lg-3">
+	<p>Con <b>{{relatore}}</b></p>
+	<p>{{descrizione}}</p>
+	</div>
+
+	<div class="col-lg-2">
+	<p>{{cena}}</p>
+	</div>
+
+	<div class="col-lg-2">
+	<p><b>{{film}}</b><br>
+	Regia: {{regista}}<br>
+	Durata: {{durata}} min.</p>
+	</div>
+
+	</div>
+	</div>
+	
+
+	</script>
+
+	</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<!-- Don't need jQuery for Tabletop, but using it for this example -->
+	<script type="text/javascript" src="js/handlebars.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/tabletop.js"></script>
+	<script type="text/javascript">
+	var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1uhaUr95IdeuRwz9nN1JPMoH0dgXHlmR0RUJ2XTWjimI/edit?usp=sharing';
+
+	$(document).ready( function() {
+	Tabletop.init( { key: public_spreadsheet_url,
+	callback: showInfo,
+	parseNumbers: true } );
+	});
+
+	function showInfo(data, tabletop) {
+	var source   = $("#cat-template").html();
+	var template = Handlebars.compile(source);
+
+	$.each( tabletop.sheets("Sheet1").all(), function(i, cat) {
+	var html = template(cat);
+	$("#content").append(html);
+	});
+	}
+
+	</script>
+	<script type="text/javascript">
+		// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+	</script>
+	</body>
+	</html>
