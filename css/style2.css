@@ -18,6 +18,12 @@
     src: url("fonts/Syne-Italic.otf") format("opentype");
 }
 
+canvas {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
 
 html,
