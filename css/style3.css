@@ -1,0 +1,321 @@
+@font-face {
+    font-family: Syne-Regular;
+    src: url("fonts/Syne-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Syne-Bold;
+    src: url("fonts/Syne-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Syne-Extra;
+    src: url("fonts/Syne-Extra.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Syne-Italic;
+    src: url("fonts/Syne-Italic.otf") format("opentype");
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  font-family: Syne-Regular, Arial, sans-serif;
+  background-color: black;
+  color:white;
+}
+
+h1 {
+    font-family: Syne-Extra, Arial, sans-serif;
+    padding:15px 0;
+    font-size: 36px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 0 0 10px 0;
+    line-height: 30px;
+    text-align: left;
+}
+
+h5 {
+    font-family: Syne-Extra, Arial, sans-serif;
+    padding: 5px 0 20px 0;
+    font-size: 26px;
+    margin: 0 0 10px 0;
+    line-height: 30px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+
+
+h2 {
+    font-family: Syne-Bold, Arial, sans-serif;
+    font-size: 32px;
+}
+
+h3 {
+    font-family: Syne-Extra, Arial, sans-serif;
+    font-size: 16px;
+}
+h4 {
+    font-family: Syne-Bold, Arial, sans-serif;
+    font-size: 32px;
+}
+
+
+
+
+h6{
+  font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+}
+
+
+p {
+  font-size: 1.1rem;
+}
+
+.lead{
+  font-size: 24px;
+}
+
+a:hover {
+  color: ;
+}
+
+b {
+  font-family: Syne-Extra, Arial, sans-serif;
+}
+
+.regular {
+      font-family: Syne-Regular;
+}
+
+#content {
+  border-bottom: 1px solid black;
+  margin-bottom: 60px;
+}
+
+.img-responsive {
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 0px;
+}
+
+.introFine {
+margin-top: 10px;
+margin-bottom: 50px;
+}
+
+.entry {
+  border-top: 1px solid black;
+  padding: 20px 0;
+}
+
+.uauTitle {
+  height: 7rem;
+  overflow: hidden;
+  position: relative;
+  width: 7200px;
+}
+
+.introHome p {
+  font-size: 1.5rem;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 2rem;
+  padding-top: 3rem;
+}
+
+.introHome a {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.navArchivio a {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.navArchivio {
+  text-align: center;
+}
+
+.introHome h6 {
+  padding-bottom: 1rem;
+}
+
+.introHome {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.headerAccordion {
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 9999;
+  padding: 4px 0;
+}
+
+
+.card-block hr{
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #fff;
+  margin: 1em 0;
+  padding: 0; 
+  width: 50px;
+}
+
+
+.remove-all-margin{
+  padding:0 ! important;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  padding: 2rem 2rem;
+}
+
+.card-header h4 {
+  padding-top: 10px;
+}
+
+.card-header a{
+  color: #000; 
+}
+
+.card-header a:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.card-block {
+  background-color: #3a3b3b;
+  color: #fff;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.archiveLinks {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.archiveLinks a{
+  color: #fff; 
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.card {
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+}
+
+#svg-element,
+#svg-control {
+  margin: 20px;
+  overflow: visible;
+}
+
+#svg-control {
+  position: absolute;
+}
+
+#control-path {
+  fill: none;
+  stroke: red;
+  stroke-width: 0;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+.card-block {
+  padding: 2rem 2rem 0rem 2rem;
+}
+
+.archiveLinks {
+  padding-top: 3rem;
+  padding-bottom: 0rem;
+}
+
+.navArchivio {
+  text-align: left;
+}
+
+h1 {
+    font-family: Syne-Extra, Arial, sans-serif;
+    padding:5px 0;
+    font-size: 56px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+    line-height: 70px;
+    text-align:  center;
+
+}
+
+h5 {
+    font-family: Syne-Extra, Arial, sans-serif;
+    padding:5px 0;
+    font-size: 56px!important;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+    line-height: 70px;
+    text-align: center;
+
+}
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+
+  }
