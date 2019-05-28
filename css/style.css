@@ -40,6 +40,7 @@ a:hover {
 }
 
 
+
 .bigTitle{
     padding:10px 0;
     font-size: 80px;
@@ -108,12 +109,25 @@ a:hover {
   padding-top: 3rem;
 }
 
+.introHome p a{
+  font-size: 1.5rem;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 2rem;
+  padding-top: 3rem;
+}
+
+
 .introHome a {
   font-family: 'Archivo Black', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.9rem;
   color: #000;
+}
+
+.introHome h6{
+  margin-top: 20px;
 }
 
 .navArchivio a {
@@ -248,7 +262,7 @@ img{
   color: #000000;
   letter-spacing: 0;
   line-height: 2.5rem;
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 .introHome h6 {
