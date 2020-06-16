@@ -103,30 +103,11 @@ a:hover {
 .uau-bg {
   background: url("../images/bg_10.jpg") no-repeat center center fixed;
   display: flex;
-  height: 93vh;
-  width: 100%;
-  background-size: cover;
-  position: absolute;
-  top: 7vh;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow-y: hidden;
 }
 
-.uau-content {
-  position: absolute;
-  top: 7vh;
-  bottom: 0;
-  left: 50%;
-  width: 100%;
-  overflow-y: scroll;
-}
-
-.app_page1 {
-  margin: 0;
-  overflow: hidden;
-  height:100%;
+.uau-content h1{
+  margin-top: 20px;
+  font-size: 3rem;
 }
 
 .overlay {
@@ -465,6 +446,34 @@ h2 {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+
+  .uau-bg {
+    background: url("../images/bg_10.jpg") no-repeat center center fixed;
+    display: flex;
+    height: 93vh;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    top: 7vh;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow-y: hidden;
+  }
+
+  .uau-content {
+    position: absolute;
+    top: 7vh;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .uau-content h1{
+    margin-top: 30px;
+    font-size: 5rem;
+  }
 
 
   /* Extra large devices (large desktops, 1200px and up) */
