@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 <!-- Moving title -->
 <div style="width: 100%; overflow: hidden;">
 <div class="uauTitle">
-<h1>ARCHIVIO UAU – UN’AMBIGUA UTOPIA | GENNAIO—GIUGNO 2019: LA FINE DELL'UOMO<h1>
+<h1>ARCHIVIO UAU · UN’AMBIGUA UTOPIA · ARCHIVIO UAU · UN’AMBIGUA UTOPIA<h1>
 </div>
 </div>
 
@@ -28,15 +28,20 @@
 <div class="row justify-content-md-center introHome align-middle">
 <div class="lg-12 col-xl-5">
  <img src="images/cover.gif" class="img-responsive mx-auto d-none d-sm-block" alt="Un’Ambigua Utopia">
- <img src="images/cover_sm.gif" class="img-responsive mx-auto d-block d-sm-none" alt="Un’Ambigua Utopia"> 
+ <img src="images/cover_sm.gif" class="img-responsive mx-auto d-block d-sm-none" alt="Un’Ambigua Utopia">
 </div>
 <div class="col-lg-12 col-xl-5">
 <p>Il capitale deve, per sopravvire e svilupparsi, reprimere i veri bisogni dell’uomo, per sostituirli con i suoi bisogni, con un modello di vita e di società a lui congeniale. La fantascienza è un segno di rivolta a tutto questo, è la riscossa del principio del “piacere” sul principio di “realtà”.</p>
 <h6>Un’Ambigua Utopia N.1 - Aprile 1978</h6>
+<hr>
 <a href="archivio.html">Esplora l'archivio</a><br>
+<hr>
 <a href="progetto.html">Il progetto</a>
 <hr>
-<a href="la-fine.html" class="link-fine">Gennaio—Giugno 2019: La fine dell'Uomo</a>
+<a href="la-fine.html">Gennaio—Giugno 2019: La fine dell'Uomo</a>
+<hr>
+<a href="uau10.html"><img src="images/new.png" width="42" height="42" style="vertical-align:middle;margin:0px 20px 10px 0" class="rotating" alt="Un’Ambigua Utopia"> Un'Ambigua Utopia N.10 <img src="images/new.png" width="42" height="42" style="vertical-align:middle;margin:0px 20px 0 20px" class="rotating" alt="Un’Ambigua Utopia"></a>
+<hr>
 </div>
 </div>
 </div>
@@ -57,7 +62,7 @@ const height = svg.height.baseVal.value
 // Need to interpolate first, so angles remain sharp
 warp.interpolate(1)
 
-// 
+//
 // Envelope distort shape
 
 // Start with a rectangle, then distort it later
@@ -85,19 +90,19 @@ for(let i = 0; i < controlPoints.length; i++)
 // Compute weights from control points
 
 warp.transform(function(v0, V=controlPoints)
-{	
+{
 	const A = []
 	const W = []
 	const L = []
-	
+
 	// Find angles
 	for(let i = 0; i < V.length; i++)
 	{
 		const j = (i + 1) % V.length
-		
+
 		const vi = V[i]
 		const vj = V[j]
-		
+
 		const r0i = Math.sqrt((v0[0] - vi[0])**2 + (v0[1] - vi[1])**2)
 		const r0j = Math.sqrt((v0[0] - vj[0])**2 + (v0[1] - vj[1])**2)
 		const rij = Math.sqrt((vi[0] - vj[0])**2 + (vi[1] - vj[1])**2)
@@ -107,27 +112,27 @@ warp.transform(function(v0, V=controlPoints)
 
 		A[i] = isNaN(r) ? 0 : Math.acos(Math.max(-1, Math.min(r, 1)))
 	}
-	
+
 	// Find weights
 	for(let j = 0; j < V.length; j++)
 	{
 		const i = (j > 0 ? j : V.length) - 1
-		
+
 		const vi = V[i]
 		const vj = V[j]
-		
+
 		const r = Math.sqrt((vj[0] - v0[0])**2 + (vj[1] - v0[1])**2)
-		
+
 		W[j] = (Math.tan(A[i] / 2) + Math.tan(A[j] / 2)) / r
 	}
-	
+
 	// Normalise weights
 	const Ws = W.reduce((a, b) => a + b, 0)
 	for(let i = 0; i < V.length; i++)
 	{
 		L[i] = W[i] / Ws
 	}
-	
+
 	// Save weights to the point for use when transforming
 	return [...v0, ...L]
 })
@@ -160,14 +165,14 @@ function reposition([x, y, ...W], V=controlPoints)
 {
 	let nx = 0
 	let ny = 0
-	
+
 	// Recreate the points using mean value coordinates
 	for(let i = 0; i < V.length; i++)
 	{
 		nx += W[i] * V[i][0]
 		ny += W[i] * V[i][1]
 	}
-	
+
 	return [nx, ny, ...W]
 }
 
@@ -180,7 +185,7 @@ function drawControlShape(element=controlPath, V=controlPoints)
 	{
 		path.push(`L${V[i][0]} ${V[i][1]}`)
 	}
-	
+
 	path.push('Z')
 	element.setAttribute('d', path.join(''))
 }
@@ -199,12 +204,12 @@ function animate()
 			origControlPoints[i][1] + radius * Math.sin(angle + off),
 		]
 	}
-	
+
 	drawControlShape()
 	warp.transform(reposition)
-	
+
 	angle += 0.05
-	
+
 	requestAnimationFrame(animate)
 }
 
