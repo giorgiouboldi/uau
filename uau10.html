@@ -31,101 +31,103 @@
 	</div>
 
 
-<div class="container-fluid">
+	<div class="container-fluid">
 
-<div class="row">
+		<div class="row">
 
-	<div class="col-md-6 col-sm-12 uau-bg">
-		<img class="overlay" src="images/uau_10.jpg">
-	</div>
+			<div class="col-md-6 col-sm-12 uau-bg">
+				<img src="images/uau_10.jpg" class="overlay img-responsive mx-auto d-none d-sm-block" alt="Un’Ambigua Utopia">
+				<img src="images/uau_10_mobile.jpg" class="overlay img-responsive mx-auto d-block d-sm-none" alt="Un’Ambigua Utopia">
 
-	<!-- Script to get cards -->
-	<div class="col-md-6 col-sm-12 uau-content">
+			</div>
 
-		<h1>Un'ambigua Utopia N.10</h1>
-		<p>Con 38 anni di ritardo, un numero speciale di Un'Ambigua Utopia è in arrivo. Diaoghi, racconti, saggi, ricette e materiale d'archivio per raccontare la Fine dell'Uomo.
-		</p>
-		<p>Qui sotto trovi gli eventi di presentazione e Un Ambiguo Podcast, una collezione di pillole audio che anticipano l'uscita del numero dieci e invitano a scoprirne voci, angolazioni, letture che hanno arricchito la produzione della rivista.
-			Ogni lunedì online una nuova puntata online...finché ce n'è.</p>
-		<hr>
-		<h5>Un Ambiguo Podcast</h5>
-		<div id="content"></div>
+			<!-- Script to get cards -->
+			<div class="col-md-6 col-sm-12 uau-content">
 
-		<script id="cat-template" type="text/x-handlebars-template">
-			<h2>EP. {{episodio}} · {{titolo}}</h2>
-			<p>{{descrizione}}</p>
-			<audio controls>
-				<source src="{{audio}}" type="audio/mpeg" />
-				<a href="{{audio}}">horse</a>
-			</audio>
-			<hr>
+				<h1>Un'ambigua Utopia N.10</h1>
+				<p>Con 38 anni di ritardo, un numero speciale di Un'Ambigua Utopia è in arrivo. Diaoghi, racconti, saggi, ricette e materiale d'archivio per raccontare la Fine dell'Uomo.
+				</p>
+				<p>Qui sotto trovi gli eventi di presentazione e Un Ambiguo Podcast, una collezione di pillole audio che anticipano l'uscita del numero dieci e invitano a scoprirne voci, angolazioni, letture che hanno arricchito la produzione della rivista.
+					Ogni lunedì online una nuova puntata online...finché ce n'è.</p>
+					<hr>
+					<h5>Un Ambiguo Podcast</h5>
+					<div id="content"></div>
 
+					<script id="cat-template" type="text/x-handlebars-template">
+						<h2>EP. {{episodio}} · {{titolo}}</h2>
+						<p>{{descrizione}}</p>
+						<audio controls>
+							<source src="{{audio}}" type="audio/mpeg" />
+							<a href="{{audio}}">horse</a>
+						</audio>
+						<hr>
+
+					</script>
+					<p>A breve distribuiremo il podcast sulle piattaforma principali. Per il momento lo potete ascoltare o scaricare qui o aggiungere il feed RSS al vosto software preferito per ascoltare podcast.<br>
+
+						<samp id="p1" class="d-none">https://other-unwilling-barasinga.gigalixirapp.com/podcast/uau-pod </samp>
+						<button type="button" class="btn btn-dark" onclick="copyToClipboard('#p1')">Copia Feed</button>
+
+						<hr>
+						<h5>EVENTI DI PRESENTAZIONE</h5>
+						<p>Ci stiamo attrezzando per organizzare degli eventi di presentazione all'aperto che si svolgeranno a Milano e in giro per l'Italia. Rimanete sintonizzati.</p>
+
+
+					</div>
+
+
+				</div>
+			</div>
+
+
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+			<!-- Don't need jQuery for Tabletop, but using it for this example -->
+			<script type="text/javascript" src="js/handlebars.js"></script>
+			<script type="text/javascript" src="js/jquery.js"></script>
+			<script type="text/javascript" src="js/tabletop.js"></script>
+			<script type="text/javascript">
+			var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1uvODc9r3gF2eo2fTINJgwhoKCdbtn924hoBwfcttGCw/edit?usp=sharing';
+
+			$(document).ready( function() {
+				Tabletop.init( { key: public_spreadsheet_url,
+					callback: showInfo,
+					parseNumbers: true } );
+				});
+
+				function showInfo(data, tabletop) {
+					var source   = $("#cat-template").html();
+					var template = Handlebars.compile(source);
+
+					$.each( tabletop.sheets("Sheet1").all(), function(i, cat) {
+						var html = template(cat);
+						$("#content").append(html);
+					});
+				}
+
+			</script>
+			<script type="text/javascript">
+			var clip = new Clipboard('.btn');
+
+			clip.on("success", function() {
+				document.body.insertAdjacentHTML('beforeend', '<div>that worked.</div>');
+			});
+			clip.on("error", function() {
+				document.body.insertAdjacentHTML('beforeend', '<div>that didn\'t work.</div>');
+			});
 		</script>
-		<p>A breve distribuiremo il podcast sulle piattaforma principali. Per il momento lo potete ascoltare o scaricare qui o aggiungere il feed RSS al vosto software preferito per ascoltare podcast.<br>
 
-		<samp id="p1" class="d-none">https://other-unwilling-barasinga.gigalixirapp.com/podcast/uau-pod </samp>
-		<button type="button" class="btn btn-dark" onclick="copyToClipboard('#p1')">Copia Feed</button>
-
-		<hr>
-		<h5>EVENTI DI PRESENTAZIONE</h5>
-		<p>Ci stiamo attrezzando per organizzare degli eventi di presentazione all'aperto che si svolgeranno a Milano e in giro per l'Italia. Rimanete sintonizzati.</p>
-
-
-	</div>
-
-
-</div>
-</div>
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-<!-- Don't need jQuery for Tabletop, but using it for this example -->
-<script type="text/javascript" src="js/handlebars.js"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/tabletop.js"></script>
-<script type="text/javascript">
-	var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1uvODc9r3gF2eo2fTINJgwhoKCdbtn924hoBwfcttGCw/edit?usp=sharing';
-
-	$(document).ready( function() {
-		Tabletop.init( { key: public_spreadsheet_url,
-			callback: showInfo,
-			parseNumbers: true } );
-	});
-
-	function showInfo(data, tabletop) {
-		var source   = $("#cat-template").html();
-		var template = Handlebars.compile(source);
-
-		$.each( tabletop.sheets("Sheet1").all(), function(i, cat) {
-			var html = template(cat);
-			$("#content").append(html);
-		});
-	}
-
-</script>
-<script type="text/javascript">
-var clip = new Clipboard('.btn');
-
-clip.on("success", function() {
-  document.body.insertAdjacentHTML('beforeend', '<div>that worked.</div>');
-});
-clip.on("error", function() {
-  document.body.insertAdjacentHTML('beforeend', '<div>that didn\'t work.</div>');
-});
-</script>
-
-<!-- Copy to clipboard -->
-<script type="text/javascript">
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-}
-</script>
+		<!-- Copy to clipboard -->
+		<script type="text/javascript">
+		function copyToClipboard(element) {
+			var $temp = $("<input>");
+			$("body").append($temp);
+			$temp.val($(element).text()).select();
+			document.execCommand("copy");
+			$temp.remove();
+		}
+	</script>
 
 </body>
 </html>
