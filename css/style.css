@@ -103,6 +103,7 @@ a:hover {
 .uau-bg {
   background: url("../images/bg_10.jpg") no-repeat center center fixed;
   display: flex;
+  height: 700px; 
 }
 
 .uau-content h1{
