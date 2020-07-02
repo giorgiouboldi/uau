@@ -51,24 +51,23 @@
 					Ogni lunedì online una nuova puntata online...finché ce n'è.</p>
 					<hr>
 					<h5>Un Ambiguo Podcast</h5>
+					<p>Per non perderti nessun episodio, copia il feed RSS nel tuo software per podcast preferito.
+
+						<samp id="p1" class="d-none">https://openpod.abbiamoundominio.org/podcast/uau-pod </samp>
+						<button type="button" class="btn btn-dark" onclick="copyToClipboard('#p1')">Copia Feed</button>
 					<div id="content"></div>
 
 					<script id="cat-template" type="text/x-handlebars-template">
+						<hr>
 						<h2>EP. {{episodio}} · {{titolo}}</h2>
 						<p>{{descrizione}}</p>
 						<audio controls>
 							<source src="{{audio}}" type="audio/mpeg" />
 							<a href="{{audio}}">horse</a>
 						</audio>
-						<hr>
 
 					</script>
-					<!--<p>A breve distribuiremo il podcast sulle piattaforma principali. Per il momento lo potete ascoltare o scaricare qui o aggiungere il feed RSS al vosto software preferito per ascoltare podcast.<br>
-
-						<samp id="p1" class="d-none">https://other-unwilling-barasinga.gigalixirapp.com/podcast/uau-pod </samp>
-						<button type="button" class="btn btn-dark" onclick="copyToClipboard('#p1')">Copia Feed</button>
-
-						<hr>-->
+						<hr>
 						<h5>EVENTI DI PRESENTAZIONE</h5>
 						<p>Lunedì 6 Luglio (ore 21.00) - <a href="https://www.facebook.com/events/211364353312975/">Anteprima planetaria in Cascina Torchiera</a>.</p>
 						<hr>
