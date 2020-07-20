@@ -60,14 +60,6 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
-}
-
 h5{
   font-family: 'Fivo Sans Black', sans-serif;
   text-transform: uppercase;
@@ -78,10 +70,11 @@ h6{
   font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
 }
 
+
 h2 {
   font-family: 'Fivo Sans Regular';
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 h1 {
@@ -421,7 +414,10 @@ audio {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.3rem;
+  border-top: 1px solid black;
+  padding-top: 20px;
+  margin-top: 40px;
 }
 
 .card-block {
