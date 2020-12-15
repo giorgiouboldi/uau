@@ -58,6 +58,7 @@ body {
   text-rendering: optimizeLegibility;
   margin: 0;
   font-family: "Times New Roman", Times, serif;
+  color: black;
 }
 
 h5{
@@ -102,6 +103,28 @@ a:hover {
   color: #000;
 }
 
+.btn-dark{
+  font-family: 'Fivo Sans Regular';
+  border-radius: 100px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  padding: 5px 30px 4px;
+  background-color: black;
+  color: white!important;
+  font-weight: 400;
+}
+
+.btn-active{
+  font-family: 'Fivo Sans Regular';
+  border-radius: 100px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  padding: 5px 30px 4px;
+  background-color: #48fb47;
+  color: black;
+  border: 1px solid black;
+  font-weight: 400;
+}
 
 .uau-bg {
   background: none;
@@ -284,12 +307,16 @@ audio {
   margin-top: 20px;
 }
 
+.introHome h2 {
+  font-size: 1.2rem;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 2rem;
+  padding-top: 3rem;
+}
+
 .navArchivio a {
-  font-family: 'Fivo Sans Black', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 1rem;
-  color: #000;
+
 }
 
 .navArchivio {
@@ -302,7 +329,6 @@ audio {
 
 .introHome {
   margin-bottom: 4rem;
-  text-align: center;
 }
 
 .headerAccordion {
@@ -310,12 +336,12 @@ audio {
   color: #fff;
   padding: 0.3rem 2rem;
   text-transform: uppercase;
+  margin-top: 20px;
 }
 
 .navArchivio {
   padding: 1rem 2rem;
-  font-family: 'Fivo Sans Regular';
-  text-transform: uppercase;
+  height: 50px;
 }
 
 .card-block hr{
@@ -400,6 +426,8 @@ audio {
 @media (min-width: 576px) {
   .uauTitle h1 {
   font-size: 144px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .uauTitle {
@@ -407,6 +435,14 @@ audio {
 }
 
 .introHome p {
+  font-size: 2rem;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 2.5rem;
+  padding-top: 1rem;
+}
+
+.contentPage p {
   font-size: 2rem;
   color: #000000;
   letter-spacing: 0;

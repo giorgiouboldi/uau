@@ -1,0 +1,39 @@
+h1{
+  font-family: "Fivo Sans Heavy", sans-serif;
+  font-size: 72px;
+  text-transform: uppercase;
+}
+
+.btn {
+  border-radius: 100px;
+  text-transform: uppercase;
+  padding: 10px 10px!important;
+}
+
+.btn-dark{
+  font-family: 'Fivo Sans Regular';
+  border-radius: 100px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  padding: 5px 30px 4px!important;
+  background-color: black;
+  color: white!important;
+  font-weight: 400;
+}
+
+.btn-active{
+  font-family: 'Fivo Sans Regular';
+  border-radius: 100px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  padding: 5px 30px 4px!important;
+  background-color: #48fb47;
+  color: black;
+  border: 1px solid black;
+  font-weight: 400;
+}
+
+.navArchivio {
+  padding: 1rem 2rem;
+  height: 50px;
+}
