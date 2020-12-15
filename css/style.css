@@ -296,10 +296,6 @@ audio {
 }
 
 .introHome a {
-  font-family: 'Fivo Sans Black', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9rem;
   color: #000;
 }
 
